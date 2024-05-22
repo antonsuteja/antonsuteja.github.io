@@ -137,6 +137,7 @@ h1{
     text-transform: uppercase;
 }
 hr{
+    margin: 10px;
     border-top: 2px solid black;
 }
 p{
