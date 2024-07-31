@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penyewaan Mobil Melati Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    width: 150px;
+}
+
+input, select {
+    padding: 5px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Penyewaan Mobil Melati Form</h1>
+    <form id="reservationForm">
+        <label for="id">No Identitas:</label>
+        <input type="text" id="id" name="id" required><br><br>
+        
+        <label for="name">Nama Penyewa:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="phone">No Hp:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+        
+        <label for="nights">Jenis Layanan:</label><br>
+        <input type="radio" name="dengansupir" id="ds"> Dengan Supir<br><br>
+        <input type="radio" name="tanpasupir" id="ts"> Tanpa Supir<br><br>
+
+        <label for="roomType">Pilih Jenis Mobil:</label>
+        <select id="roomType" name="roomType" required>
+            <option value="">Silahkan Pilih Jenis Mobil</option>
+            <option value="Standard Room">Sedan</option>
+            <option value="Superior Room">Hatchback</option>
+            <option value="Deluxe Room">MPV</option>
+            <option value="Suite Room">SUV</option>
+            <option value="Suite Room">Crossover</option>
+        </select><br><br>
+
+        <label for="lamasewa">Lama Penyewan:</label>
+        <input type="number" name="hari" id="ls"><br><br>
+        
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const form = document.getElementById('reservationForm');
+            if (form.checkValidity()) {
+                alert("Informasi Tersimpan !");
+            } else {
+                alert("Tolong Lengkapi From Dibawah !");
+            }
+        }
+    </script>
+</body>
+</html>
