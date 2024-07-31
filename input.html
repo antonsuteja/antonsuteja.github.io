@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Melati Reservation Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+}
+
+input, select {
+    width: calc(100% - 160px);
+    padding: 5px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Hotel Melati Reservation Form</h1>
+    <form id="reservationForm">
+        <label for="id">No Identitas:</label>
+        <input type="text" id="id" name="id" required><br><br>
+        
+        <label for="name">Nama Penyewa:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="phone">No Hp:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+        
+        <label for="nights">Lama Menginap:</label>
+        <input type="number" id="nights" name="nights" required><br><br>
+        
+        <label for="roomType">Tipe Kamar:</label>
+        <select id="roomType" name="roomType" required>
+            <option value="">Silahkan Pilih Tipe Kamar</option>
+            <option value="Standard Room">Standard Room</option>
+            <option value="Superior Room">Superior Room</option>
+            <option value="Deluxe Room">Deluxe Room</option>
+            <option value="Suite Room">Suite Room</option>
+        </select><br><br>
+        
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const form = document.getElementById('reservationForm');
+            if (form.checkValidity()) {
+                alert("Informasi Tersimpan !");
+            } else {
+                alert("Tolong Lengkapi From Dibawah !");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi Hotel Melati</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+}
+
+input, select {
+    width: calc(100% - 160px);
+    padding: 5px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Reservasi Hotel Melati</h1>
+    <a href="input.html">Tambahkan Reservasi</a><br><br>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>No Identitas</th>
+                <th>Nama Penyewa</th>
+                <th>No Hp</th>
+                <th>Lama Menginap</th>
+                <th>Tipe Kamar</th>
+                <th>Tindakan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2341</td>
+                <td>Hanif</td>
+                <td>1234567890</td>
+                <td>3 Hari</p></td>
+                <td>Deluxe Room</td>
+                <td>
+                    <a href="input.html">Edit</a> | 
+                    <a href="#" onclick="confirmDelete(1)">Hapus</a>
+                </td>
+            </tr>
+                <td>2456</td>
+                <td>Zidan</td>
+                <td>1234509876</td>
+                <td>2 Hari</p></td>
+                <td>Standard Room</td>
+                <td>
+                    <a href="input.html">Edit</a> | 
+                    <a href="#" onclick="confirmDelete(1)">Hapus</a>
+                </td>
+            </tr>
+            </tr>
+                <td>3789</td>
+                <td>Rizal</td>
+                <td>0987654321</td>
+                <td>4 Hari</p></td>
+                <td>Suite Room</td>
+                <td>
+                    <a href="input.html">Edit</a> | 
+                    <a href="#" onclick="confirmDelete(1)">Hapus</a>
+                </td>
+            </tr>
+            </tr>
+                <td>4112</td>
+                <td>Taufik</td>
+                <td>0987612345</td>
+                <td>5 Hari</p></td>
+                <td>Superior Room</td>
+                <td>
+                    <a href="input.html">Edit</a> | 
+                    <a href="#" onclick="confirmDelete(1)">Hapus</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function confirmDelete(id) {
+            if (confirm("Are you sure you want to delete this reservation?")) {
+                // Add code here to handle deletion
+                alert("Reservation deleted successfully!");
+            }
+        }
+    </script>
+</body>
+</html>
